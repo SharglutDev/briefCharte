@@ -1,7 +1,18 @@
+body {
+    background-color: rgba(242, 245, 247, 255);
+}
+
 ul {
     list-style-type: none;
     margin: 0;
 }
+
+.header {
+    background-color: #FFF;
+    text-align: center;
+    padding-top: 20px;
+}
+
 
 .main {
     background-color: rgba(242,245,247,255);
@@ -27,7 +38,6 @@ button {
 
 h5 {
     font-weight: bold;
-    font-size: 25px;
 }
 
 .section-container {
@@ -35,20 +45,21 @@ h5 {
     margin-block: 20px;
     padding: 20px;
     border-radius: 15px;
-    box-shadow: 0 0 1px rgba(242,245,247,255);
+    box-shadow: 0 0 2px rgba(242,245,247,255);
 }
 
 li span {
     padding-left: 5px;
 }
-ul {
-    list-style-image: url(../images/bullet.png) ;
-    padding-left: 15px;
-    padding-bottom: 15px;
-    padding-top: 15px;
-}
 
-section{
-    background-color:white;
-    border-radius: 15px;
+@media (min-width: 900px){
+    .row {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    .column {
+        width: 50%;
+    }
 }
