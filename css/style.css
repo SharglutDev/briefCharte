@@ -42,10 +42,9 @@ li span {
     padding-left: 5px;
 }
 ul {
-    list-style-image: url(../images/bullet.png) ;
-    padding-left: 15px;
-    padding-bottom: 15px;
-    padding-top: 15px;
+    /* list-style-image: url(../images/bullet.png) ; */
+    padding: 20px;
+    
 }
 
 section{
