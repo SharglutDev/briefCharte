@@ -1,3 +1,5 @@
+// Random Name Button Logic \\
+
 const studentList = [
     'Paul',
     'Floriane',
@@ -34,3 +36,19 @@ randomButton.addEventListener('click', () => {
     pickRandomStudent()
 })
 
+// DROPDOWN BLOCK LOGIC \\
+
+const dropdownButtons = document.querySelectorAll(".dropdown")
+
+const toggleClassActive = (clickedButton) => {
+    const parentNodex2 = clickedButton.parentNode.parentNode // selecting the first common parent between the dropdown button and the list
+    const childListItems = parentNodex2.querySelector(".list-items")
+    childListItems.classList.toggle('active')
+}
+
+dropdownButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+        toggleClassActive(button)
+        button.classList.toggle('rotate') // adding rotate(180deg) to the style worked only for 1 click
+    })
+})

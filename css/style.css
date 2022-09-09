@@ -50,6 +50,7 @@ ul {
 
 h5 {
     font-weight: bold;
+    margin: 0;
 }
 
 .section-container {
@@ -58,6 +59,31 @@ h5 {
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 0 2px rgba(242,245,247,255);
+}
+
+.section-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dropdown {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.list-items {
+    display: none;
+    margin-top: 20px;;
+}
+
+.active {
+    display: block;
+}
+
+.rotate {
+    transform: rotate(180deg)
 }
 
 li span {
