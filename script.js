@@ -43,14 +43,18 @@ randomButton.addEventListener("click", () => {
 const dropdownButtons = document.querySelectorAll(".dropdown");
 
 const toggleClassActive = (clickedButton) => {
-  const parentNodex2 = clickedButton.parentNode.parentNode; // selecting the first common parent between the dropdown button and the list
-  const childListItems = parentNodex2.querySelector(".list-items");
+  const commonParentNode = clickedButton.closest(".section-container"); // selecting the first common parent between the dropdown button and the list
+  const childListItems = commonParentNode.querySelector(".list-items");
   childListItems.classList.toggle("active");
 };
 
 dropdownButtons.forEach((button) => {
-  button.addEventListener("click", () => {
+  button.addEventListener("click", (e) => {
+    // const closestList = e.target
+    //   .closest(".section-container")
+    //   .querySelector(".list-items");
+    // closestList.classList.toggle("active"); Autre manière avec e.target
     toggleClassActive(button);
-    button.classList.toggle("rotate"); // adding rotate(180deg) to the style worked only for 1 click
+    button.classList.toggle("rotate");
   });
 });
